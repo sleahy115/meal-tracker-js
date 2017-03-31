@@ -9,10 +9,11 @@ import { Food } from './food.model';
 export class AppComponent {
   title = 'Meal Tracker';
 
-  masterFoodList [
+  masterFoodList: Food[] = [
     new Food('Breakfast','Burrito', 300, 'Eggs, ham, hot sauce'),
     new Food('Lunch', 'Sushi roll', 500, 'Yum!'),
     new Food('Dinner', 'Steak', 900, 'Diet tomorrow'),
     new Food('Dinner', 'stir-fry', 550, 'MUch Better')
   ];
+
 }
