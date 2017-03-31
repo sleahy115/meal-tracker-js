@@ -1,0 +1,13 @@
+<p> new-food works! </p>
+<div class="container">
+<h1>Add to food log</h1>
+  <label>Meal</label>
+  <input #newMeal class="form-control">
+  <label>Name</label>
+  <input #newName class="form-control">
+  <label>Calories</label>
+  <input #newCalories class="form-control">
+  <label>Details</label>
+  <input #newDetails class="form-control">
+  <button (click)="submitNewFood(newMeal.value, newName.value, newCalories.value, newDetails.value)">Add meal to log</button>
+</div>

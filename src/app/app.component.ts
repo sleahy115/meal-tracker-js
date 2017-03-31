@@ -16,4 +16,7 @@ export class AppComponent {
     new Food('Dinner', 'stir-fry', 550, 'MUch Better')
   ];
 
+  addFood(newFoodFromChild: Food) {
+    this.masterFoodList.push(newFoodFromChild);
+  }
 }
