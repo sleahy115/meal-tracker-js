@@ -32,7 +32,28 @@ export class FoodListComponent implements OnInit {
 
   onChangeDays(optionFromMenu) {
     this.filterByDays = optionFromMenu;
+    var days = [];
+    for(var i=0; i<=this.childFoodList.length; i++) {
+      if(this.childFoodList[i].dayOfWeek.toLowerCase() === optionFromMenu) {
+        days.push(this.childFoodList[i]);
+        console.log(days);
+      for(var i=0; i<days.length; i++) {
+        console.log(calories);
+        var calories = days[i].calories+ calories;
+      }
+      console.log(calories);
+    }
   }
+    return calories;
+  }
+  // var output: Food[] = [];
+  // if(desiredCalories === "lessThanFiveHundred") {
+  //   for(var i=0; i< input.length; i++){
+  //     if(input[i].calories <= 500) {
+  //       output.push(input[i]);
+  //     }
+  //   }
+  //   return output;
 
 
   calorieColor(currentFood){

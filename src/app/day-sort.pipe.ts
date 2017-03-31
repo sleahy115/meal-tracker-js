@@ -10,49 +10,53 @@ export class DaySortPipe implements PipeTransform {
     var output: Food[] = [];
     if (desiredDay === "monday") {
       for (var i=0; i<input.length; i++) {
-        if (input[i].dayOfWeek === "Monday") {
+        if (input[i].dayOfWeek.toLowerCase() === "monday") {
           output.push(input[i]);
         }
       }
-      console.log(output);
       return output;
     } else if (desiredDay === "tuesday") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].dayOfWeek === "Tuesday") {
+        if (input[i].dayOfWeek.toLowerCase() === "tuesday") {
           output.push(input[i]);
         }
       }
       return output;
     } else if (desiredDay === "wednesday") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].dayOfWeek === "Wednesday") {
+        if (input[i].dayOfWeek.toLowerCase() === "wednesday") {
           output.push(input[i]);
         }
       }
+      return output;
     } else if (desiredDay === "thursday") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].dayOfWeek === "Thursday") {
+        if (input[i].dayOfWeek.toLowerCase() === "thursday") {
           output.push(input[i]);
         }
       }
+      return output;
     } else if (desiredDay === "friday") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].dayOfWeek === "Friday") {
+        if (input[i].dayOfWeek.toLowerCase() === "friday") {
           output.push(input[i]);
         }
       }
+      return output;
     } else if (desiredDay === "saturday") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].dayOfWeek === "Saturday") {
+        if (input[i].dayOfWeek.toLowerCase() === "saturday") {
           output.push(input[i]);
         }
       }
+      return output;
     } else if (desiredDay === "sunday") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].dayOfWeek === "Sunday") {
+        if (input[i].dayOfWeek.toLowerCase() === "sunday") {
           output.push(input[i]);
         }
       }
+      return output;
     } else {
       return input;
     }
