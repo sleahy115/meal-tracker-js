@@ -18,10 +18,12 @@ export class FoodListComponent implements OnInit {
 
   showFoodDetails(currentFood) {
     this.showDetails = currentFood;
+    this.showDaily = 0;
   }
 
   hideFoodDetails(currentFood) {
     this.showDetails = null;
+    this.showDaily = 0;
   }
   editButtonHasBeenClicked(foodToEdit: Food) {
     this.clickSender.emit(foodToEdit);
