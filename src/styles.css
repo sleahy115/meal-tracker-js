@@ -26,3 +26,21 @@
   font-size: 18px;
   color: white;
 }
+
+.high {
+  color: red;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.medium {
+  color: green;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.low{
+  color:orange;
+  font-style: italic;
+  font-size: 15px;
+}

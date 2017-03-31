@@ -8,14 +8,14 @@
     </select>
   </div>
   <h3 id=title>Meals</h3>
-  <div class="panel panel-default" >
+  <div class="panel panel-default">
   <li *ngFor="let currentFood of childFoodList | calorieSort:filterByCalories" class="panel-heading" id="food" (click)="showFoodDetails(currentFood)">Name:&nbsp;{{currentFood.name}}</li>
   </div>
 
   <div class="well" *ngIf="showDetails" id="well">
     <h2 id=title>Details for {{showDetails.name}}</h2>
     <p>{{showDetails.meal}}</p>
-    <p>{{showDetails.calories}}</p>
+    <p [class]="calorieColor(showDetails)">{{showDetails.calories}}</p>
     <p>{{showDetails.details}}</p>
     <button (click)="hideFoodDetails()" id="click">Hide</button>
     <button (click)="editButtonHasBeenClicked(showDetails)" id="click">Edit</button>

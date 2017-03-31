@@ -1,5 +1,7 @@
-<h1 class="jumbotron" id="jumbotron">{{title}}</h1>
+<body id="body">
+  <h1 class="jumbotron" id="jumbotron">{{title}}</h1>
 
-<app-food-list [childFoodList]="masterFoodList" (clickSender)="editFood($event)"></app-food-list>
-<app-new-food (newFoodSender)="addFood($event)"></app-new-food>
-<app-edit-food [childSelectedFood]="selectedFood" (doneButtonClickedSender)="finishedEditing()"></app-edit-food>
+  <app-food-list [childFoodList]="masterFoodList" (clickSender)="editFood($event)"></app-food-list>
+  <app-new-food (newFoodSender)="addFood($event)"></app-new-food>
+  <app-edit-food [childSelectedFood]="selectedFood" (doneButtonClickedSender)="finishedEditing()"></app-edit-food>
+</body>

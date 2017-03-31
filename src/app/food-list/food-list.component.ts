@@ -29,6 +29,16 @@ export class FoodListComponent implements OnInit {
     this.filterByCalories = optionFromMenu;
   }
 
+  calorieColor(currentFood){
+    if(currentFood.calories > 500) {
+      return "high";
+    }else if (currentFood.calories >=300) {
+      return "medium";
+    }else {
+      return "low";
+    }
+  }
+
 
   constructor() { }
 
