@@ -10,9 +10,19 @@ export class NewFoodComponent implements OnInit {
   @Input() childFoodList: Food;
   @Output() newFoodSender = new EventEmitter;
 
+  showNew: boolean = false;
+
   submitNewFood(meal: string, name: string, calories: number, details: string) {
     var newFoodToAdd: Food = new Food(meal, name, calories, details);
     this.newFoodSender.emit(newFoodToAdd);
+  }
+
+  showNewForm() {
+    this.showNew = true;
+  }
+
+  hideNewForm() {
+    this.showNew = false;
   }
 
   constructor() { }

@@ -1,4 +1,5 @@
-<div class="container">
+<button (click)="showNewForm()">Add a meal</button>
+<div class="container" *ngIf="showNew">
 <h1>Add to food log</h1>
   <label>Meal</label>
   <input #newMeal class="form-control">
@@ -9,4 +10,5 @@
   <label>Details</label>
   <input #newDetails class="form-control">
   <button (click)="submitNewFood(newMeal.value, newName.value, newCalories.value, newDetails.value)">Add meal to log</button>
+  <button (click)="hideNewForm()">Hide</button>
 </div>
