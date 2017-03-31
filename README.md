@@ -14,13 +14,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
 ## Planning
 
@@ -46,10 +39,12 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
       -edit-food-list.component.ts
       -edit-food-list.component.html
       * calorie-sort - sorting pipe
-      -calorie-sort.pipe
+      -calorie-sort.pipe.ts
+      * day-sort -sorting-pipe
+      -day-sort.pipe.ts
 
 ### Development
-1. Create model with hardcoded values.
+1. Create model with hard coded values.
 2. Create food-list component with output.
 3. Create add-food component with form.
 4. Create edit-food component with form.
@@ -57,7 +52,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 6. Add Bootstrap and styling.
 7. Add calorie color function.
 8. Add day to object, display food by day.
-9. Sort food by meal.
+9. Sort food by day.
+10. Sort food by day and calories.
+11. Output daily calorie intake.
 
 
 ## Further help
