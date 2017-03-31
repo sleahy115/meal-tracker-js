@@ -10,7 +10,10 @@
     <input #newCalories class="form-control">
     <label>Details</label>
     <input #newDetails class="form-control">
-    <button (click)="submitNewFood(newMeal.value, newName.value, newCalories.value, newDetails.value)" id="click">Add meal to log</button>
+    <label>Day of week</label>
+    <input #newdayOfWeek class="form-control">
+
+    <button (click)="submitNewFood(newMeal.value, newName.value, newCalories.value, newDetails.value, newdayOfWeek.value)" id="click">Add meal to log</button>
     <button (click)="hideNewForm()" id="click">Hide</button>
   </div>
 </div>

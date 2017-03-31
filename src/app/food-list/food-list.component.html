@@ -7,6 +7,19 @@
       <option value="lessThanFiveHundred">Meals under 500 calories</option>
     </select>
   </div>
+  <div class="panel-default">
+    <h3 id=title>Sort by Day</h3>
+    <select (change)="onChange($event.target.value)">
+      <option value="allDays" selected="selected">All days</option>
+      <option value="monday">Monday</option>
+      <option value="tuesday">Tuesday</option>
+      <option value="wednesday">Wednesday</option>
+      <option value="thursday">Thursday</option>
+      <option value="friday">Friday</option>
+      <option value="saturday">Sunday</option>
+      <option value="sunday">Sunday</option>
+    </select>
+  </div>
   <h3 id=title>Meals</h3>
   <div class="panel panel-default">
   <li *ngFor="let currentFood of childFoodList | calorieSort:filterByCalories" class="panel-heading" id="food" (click)="showFoodDetails(currentFood)">Name:&nbsp;{{currentFood.name}}</li>
@@ -17,6 +30,7 @@
     <p>{{showDetails.meal}}</p>
     <p [class]="calorieColor(showDetails)">{{showDetails.calories}}</p>
     <p>{{showDetails.details}}</p>
+    <p>{{showDetails.dayOfWeek}}</p>
     <button (click)="hideFoodDetails()" id="click">Hide</button>
     <button (click)="editButtonHasBeenClicked(showDetails)" id="click">Edit</button>
   </div>

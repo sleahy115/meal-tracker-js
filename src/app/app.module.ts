@@ -8,6 +8,7 @@ import { FoodListComponent } from './food-list/food-list.component';
 import { NewFoodComponent } from './new-food/new-food.component';
 import { EditFoodComponent } from './edit-food/edit-food.component';
 import { CalorieSortPipe } from './calorie-sort.pipe';
+import { DaySortPipe } from './day-sort.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CalorieSortPipe } from './calorie-sort.pipe';
     FoodListComponent,
     NewFoodComponent,
     EditFoodComponent,
-    CalorieSortPipe
+    CalorieSortPipe,
+    DaySortPipe
   ],
   imports: [
     BrowserModule,

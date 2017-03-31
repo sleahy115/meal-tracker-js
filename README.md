@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
-##Setup
+## Setup
 * clone repository from https://github.com/sleahy115/meal-tracker-js
 * `npm install -g @angular/cli`
 * ` cd meal-tracker-js`
@@ -55,6 +55,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 4. Create edit-food component with form.
 5. Create calorie-sort pipe
 6. Add Bootstrap and styling.
+7. Add calorie color function.
+8. Add day to object, display food by day.
+9. Sort food by meal.
 
 
 ## Further help
