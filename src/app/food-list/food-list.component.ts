@@ -7,10 +7,11 @@ import { Food } from '../food.model';
   styleUrls: ['./food-list.component.css']
 })
 export class FoodListComponent implements OnInit {
-  @Input() childFoodList: Food[];
+  @Input() childFoodList:Food[];
   @Output() clickSender = new EventEmitter();
 
-  showDetails = null;
+  showDetails: Food = null;
+  selectedFood: Food = null;
 
   showFoodDetails(currentFood) {
     this.showDetails = currentFood;
@@ -18,6 +19,9 @@ export class FoodListComponent implements OnInit {
 
   hideFoodDetails(currentFood) {
     this.showDetails = null;
+  }
+  editButtonHasBeenClicked(foodToEdit: Food) {
+    this.clickSender.emit(foodToEdit);
   }
 
 

@@ -1,4 +1,5 @@
 <h1>{{title}}</h1>
 
-<app-food-list [childFoodList]="masterFoodList"></app-food-list>
+<app-food-list [childFoodList]="masterFoodList" (clickSender)="editFood($event)"></app-food-list>
 <app-new-food (newFoodSender)="addFood($event)"></app-new-food>
+<app-edit-food [childSelectedFood]="selectedFood" (doneButtonClickedSender)="finishedEditing()"></app-edit-food>

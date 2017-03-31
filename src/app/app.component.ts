@@ -8,6 +8,7 @@ import { Food } from './food.model';
 })
 export class AppComponent {
   title = 'Meal Tracker';
+  selectedFood = null;
 
   masterFoodList: Food[] = [
     new Food('Breakfast','Burrito', 300, 'Eggs, ham, hot sauce'),
@@ -18,5 +19,13 @@ export class AppComponent {
 
   addFood(newFoodFromChild: Food) {
     this.masterFoodList.push(newFoodFromChild);
+  }
+
+  editFood(clickedFood) {
+    this.selectedFood = clickedFood;
+  }
+
+  finishedEditing() {
+    this.selectedFood = null;
   }
 }
