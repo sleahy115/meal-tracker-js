@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Food } from '../food.model';
 
 @Component({
@@ -8,7 +8,17 @@ import { Food } from '../food.model';
 })
 export class FoodListComponent implements OnInit {
   @Input() childFoodList: Food[];
+  @Output() clickSender = new EventEmitter();
 
+  showDetails = null;
+
+  showFoodDetails(currentFood) {
+    this.showDetails = currentFood;
+  }
+
+  hideFoodDetails(currentFood) {
+    this.showDetails = null;
+  }
 
 
   constructor() { }

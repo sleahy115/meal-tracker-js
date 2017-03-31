@@ -1,3 +1,10 @@
 <p>food-list works!</p>
 
-<li *ngFor="let currentFood of childFoodList">{{currentFood.name}}</li>
+<li *ngFor="let currentFood of childFoodList" class="panel-heading" (click)="showFoodDetails(currentFood)">Name:&nbsp;{{currentFood.name}}</li>
+
+<div class="well" *ngIf="showDetails">
+  <h2>Details for {{showDetails.name}}</h2>
+  <p>{{showDetails.meal}}</p>
+  <p>{{showDetails.calories}}</p>
+  <p>{{showDetails.details}}</p>
+</div>
