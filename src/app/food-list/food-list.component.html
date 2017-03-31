@@ -27,13 +27,13 @@
 
   <div class="well" *ngIf="showDetails" id="well">
     <h2 id=title>Details for {{showDetails.name}}</h2>
-    <p>{{showDetails.meal}}</p>
-    <p [class]="calorieColor(showDetails)">{{showDetails.calories}}</p>
-    <p>{{showDetails.details}}</p>
-    <p>{{showDetails.dayOfWeek}}</p>
+    <li> Meal:&nbsp;{{showDetails.meal}}</li>
+    <li [class]="calorieColor(showDetails)"> Calories:&nbsp;{{showDetails.calories}}</li>
+    <li>Details:&nbsp;{{showDetails.details}}</li>
+    <li>Day of week:&nbsp;{{showDetails.dayOfWeek}}</li>
     <button (click)="showDailyCalories(showDetails)" id="click">Show total calories for this day</button>
-    <p>Total daily calories: {{showDaily}}</p>
-    <button (click)="hideFoodDetails()" id="click">Hide</button>
+    <li>Total daily calories: &nbsp;{{showDaily}}</li>
+    <button (click)="hideFoodDetails()" id="click">Hide details</button>
     <button (click)="editButtonHasBeenClicked(showDetails)" id="click">Edit</button>
   </div>
 </div>

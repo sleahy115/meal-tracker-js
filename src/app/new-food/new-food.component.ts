@@ -12,8 +12,8 @@ export class NewFoodComponent implements OnInit {
 
   showNew: boolean = false;
 
-  submitNewFood(meal: string, name: string, calories: number, details: string, dayOfWeek: string) {
-    var newFoodToAdd: Food = new Food(meal, name, calories, details, dayOfWeek);
+  submitNewFood(meal: string, name: string, calories: any, details: string, dayOfWeek: string) {
+    var newFoodToAdd: Food = new Food(meal, name, parseInt(calories), details, dayOfWeek);
     this.newFoodSender.emit(newFoodToAdd);
     this.showNew = false;
   }

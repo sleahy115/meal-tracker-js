@@ -30,17 +30,20 @@
 .high {
   color: red;
   font-style: italic;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .medium {
   color: green;
   font-style: italic;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .low{
   color:orange;
   font-style: italic;
-  font-size: 15px;
+  font-size: 18px;
+}
+li {
+  font-size: 18px;
 }
