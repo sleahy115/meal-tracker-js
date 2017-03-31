@@ -14,6 +14,7 @@ export class FoodListComponent implements OnInit {
   selectedFood: Food = null;
   filterByCalories: string="allMeals";
   filterByDays: string="allDays";
+  showDaily: number = 0;
 
   showFoodDetails(currentFood) {
     this.showDetails = currentFood;
@@ -32,29 +33,18 @@ export class FoodListComponent implements OnInit {
 
   onChangeDays(optionFromMenu) {
     this.filterByDays = optionFromMenu;
-    var days = [];
-    for(var i=0; i<=this.childFoodList.length; i++) {
-      if(this.childFoodList[i].dayOfWeek.toLowerCase() === optionFromMenu) {
-        days.push(this.childFoodList[i]);
-        console.log(days);
-      for(var i=0; i<days.length; i++) {
-        console.log(calories);
-        var calories = days[i].calories+ calories;
-      }
-      console.log(calories);
+  }
+
+  showDailyCalories(currentFood) {
+    var sum = 0;
+    for(var i=0; i<this.childFoodList.length; i++) {
+      if(this.childFoodList[i].dayOfWeek.toLowerCase() === currentFood.dayOfWeek.toLowerCase()) {
+      var calories = this.childFoodList[i].calories;
+       sum += calories;
     }
   }
-    return calories;
-  }
-  // var output: Food[] = [];
-  // if(desiredCalories === "lessThanFiveHundred") {
-  //   for(var i=0; i< input.length; i++){
-  //     if(input[i].calories <= 500) {
-  //       output.push(input[i]);
-  //     }
-  //   }
-  //   return output;
-
+  this.showDaily = sum;
+}
 
   calorieColor(currentFood){
     if(currentFood.calories > 500) {
