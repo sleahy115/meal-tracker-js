@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { FoodListComponent } from './food-list/food-list.component';
 import { NewFoodComponent } from './new-food/new-food.component';
 import { EditFoodComponent } from './edit-food/edit-food.component';
+import { CalorieSortPipe } from './calorie-sort.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     FoodListComponent,
     NewFoodComponent,
-    EditFoodComponent
+    EditFoodComponent,
+    CalorieSortPipe
   ],
   imports: [
     BrowserModule,

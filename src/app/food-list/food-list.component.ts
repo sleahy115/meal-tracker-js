@@ -12,6 +12,7 @@ export class FoodListComponent implements OnInit {
 
   showDetails: Food = null;
   selectedFood: Food = null;
+  filterByCalories: string="allMeals";
 
   showFoodDetails(currentFood) {
     this.showDetails = currentFood;
@@ -22,6 +23,10 @@ export class FoodListComponent implements OnInit {
   }
   editButtonHasBeenClicked(foodToEdit: Food) {
     this.clickSender.emit(foodToEdit);
+  }
+
+  onChange(optionFromMenu) {
+    this.filterByCalories = optionFromMenu;
   }
 
 

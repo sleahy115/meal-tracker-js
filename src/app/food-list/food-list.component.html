@@ -1,5 +1,14 @@
 <div class="container">
-  <li *ngFor="let currentFood of childFoodList" class="panel-heading" (click)="showFoodDetails(currentFood)">Name:&nbsp;{{currentFood.name}}</li>
+  <div class="panel-default">
+    <h3>Sort by Calories</h3>
+    <select (change)="onChange($event.target.value)">
+      <option value="allMeals" selected="selected">All meals</option>
+      <option value="moreThanOneThousand">Meals greater than 1000 calories</option>
+      <option value="lessThanFiveHundred">Meals under 500 calories</option>
+    </select>
+
+  </div>
+  <li *ngFor="let currentFood of childFoodList | calorieSort:filterByCalories" class="panel-heading" (click)="showFoodDetails(currentFood)">Name:&nbsp;{{currentFood.name}}</li>
 
   <div class="well" *ngIf="showDetails">
     <h2>Details for {{showDetails.name}}</h2>
