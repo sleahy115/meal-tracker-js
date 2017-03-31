@@ -13,6 +13,7 @@ export class FoodListComponent implements OnInit {
   showDetails: Food = null;
   selectedFood: Food = null;
   filterByCalories: string="allMeals";
+  filterByDays: string="allDays";
 
   showFoodDetails(currentFood) {
     this.showDetails = currentFood;
@@ -25,9 +26,14 @@ export class FoodListComponent implements OnInit {
     this.clickSender.emit(foodToEdit);
   }
 
-  onChange(optionFromMenu) {
+  onChangeCalories(optionFromMenu) {
     this.filterByCalories = optionFromMenu;
   }
+
+  onChangeDays(optionFromMenu) {
+    this.filterByDays = optionFromMenu;
+  }
+
 
   calorieColor(currentFood){
     if(currentFood.calories > 500) {
