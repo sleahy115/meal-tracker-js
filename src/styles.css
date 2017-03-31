@@ -3,13 +3,16 @@
   color: white;
   font-size: 25px;
 }
+
 #food:hover {
   text-decoration: underline;
   color: #c6d9ec
 }
+
 #well {
   background-color: #c6d9ec;
 }
+
 #jumbotron {
   background-color: #264d73;
   color: white;
@@ -17,10 +20,12 @@
   text-align: center;
   text-shadow: 1.5px 1.5px #3973ac;
 }
+
 #title {
   color: #264d73;
   text-shadow: 1.5px 1.5px #c6d9ec;
 }
+
 #click {
   background-color: #264d73;
   font-size: 18px;
@@ -39,11 +44,12 @@
   font-size: 18px;
 }
 
-.low{
-  color:orange;
+.low {
+  color: orange;
   font-style: italic;
   font-size: 18px;
 }
+
 li {
   font-size: 18px;
 }

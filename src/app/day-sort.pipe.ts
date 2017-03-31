@@ -9,7 +9,7 @@ export class DaySortPipe implements PipeTransform {
   transform(input: Food[], desiredDay) {
     var output: Food[] = [];
     if (desiredDay === "monday") {
-      for (var i=0; i<input.length; i++) {
+      for (var i = 0; i < input.length; i++) {
         if (input[i].dayOfWeek.toLowerCase() === "monday") {
           output.push(input[i]);
         }

@@ -7,13 +7,13 @@ import { Food } from '../food.model';
   styleUrls: ['./food-list.component.css']
 })
 export class FoodListComponent implements OnInit {
-  @Input() childFoodList:Food[];
+  @Input() childFoodList: Food[];
   @Output() clickSender = new EventEmitter();
 
   showDetails: Food = null;
   selectedFood: Food = null;
-  filterByCalories: string="allMeals";
-  filterByDays: string="allDays";
+  filterByCalories: string = "allMeals";
+  filterByDays: string = "allDays";
   showDaily: number = 0;
 
   showFoodDetails(currentFood) {
@@ -39,21 +39,21 @@ export class FoodListComponent implements OnInit {
 
   showDailyCalories(currentFood) {
     var sum = 0;
-    for(var i=0; i<this.childFoodList.length; i++) {
-      if(this.childFoodList[i].dayOfWeek.toLowerCase() === currentFood.dayOfWeek.toLowerCase()) {
-      var calories = this.childFoodList[i].calories;
-       sum += calories;
+    for (var i = 0; i < this.childFoodList.length; i++) {
+      if (this.childFoodList[i].dayOfWeek.toLowerCase() === currentFood.dayOfWeek.toLowerCase()) {
+        var calories = this.childFoodList[i].calories;
+        sum += calories;
+      }
     }
+    this.showDaily = sum;
   }
-  this.showDaily = sum;
-}
 
-  calorieColor(currentFood){
-    if(currentFood.calories > 500) {
+  calorieColor(currentFood) {
+    if (currentFood.calories > 500) {
       return "high";
-    }else if (currentFood.calories >=300) {
+    } else if (currentFood.calories >= 300) {
       return "medium";
-    }else {
+    } else {
       return "low";
     }
   }
